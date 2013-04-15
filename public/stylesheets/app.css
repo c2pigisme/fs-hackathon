@@ -1,0 +1,243 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  text-align: left;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-drag: none;
+  -webkit-user-drag: none;    
+}
+
+th {
+  font-family: 'FSecureOffice', Arial;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+#app-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#virusmap-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#world-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+#markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#virusmap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3600px;
+  height: 1800px;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -o-transform-origin: left top;
+  -ms-transform-origin: left top;
+}
+#virusmap img {
+  overflow: hidden;
+}
+
+#logo {
+  position: absolute;
+  top: 75px;
+  left: 143px;
+  background: url(../images/logo.png);
+  width: 192px;
+  height: 52px;
+  z-index: 20;
+}
+
+#virus-streamlist {
+  position: absolute;
+  top:  -3%
+  left: 2%;
+  z-index: 11;
+  height: 110px;
+  width: 300px;
+  font-family: 'FSecureOffice', Arial
+  font-size: 16px; 
+
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(255,255,255,0.3);
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+#virus-streamlist-table thead {
+  height: 48px;
+  vertical-align: top;
+  display: block;
+  position: relative;
+  left: -2px;
+  table-layout: fixed;
+  font-family: 'FSecureOffice', Arial;
+  font-size: 16px; 
+}
+#virus-streamlist-table td {
+  overflow: hidden;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap; 
+  font-family: 'FSecureOffice', Arial;
+  font-size: 16px; 
+}
+.time-cell {
+  width: 65px;
+}
+.location-cell div {
+  width: 90px;
+}
+#virus-streamlist-table th {
+  font-family: 'FSecureOffice', Arial;
+}
+#virus-streamlist-table .name-cell {
+  overflow: visible;
+  padding-left: 10px;
+}
+#virus-streamlist-table .name-cell div {
+  width: 120px;
+}
+
+#top10last24h {
+  position: absolute;
+  bottom: 516px;
+  left: 143px;
+  z-index: 11;
+  height: 100px;
+  width: 300px;
+  font-family: 'FSecureOffice', Arial;
+  font-size: 16px; 
+
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(255,255,255,0.3);
+  padding-top: 20px;
+  padding-right: 30px;
+}
+#top10last24h-table thead {
+  height: 48px;
+  vertical-align: top;
+  display: block;
+  position: relative;
+  left: -2px;
+  font-family: 'FSecureOffice', Arial;
+}
+
+#slogan {
+  position: absolute;
+  top: 98px;
+  right: 143px;
+  font-family: 'FSecureOffice', Arial;
+  font-weight: bold;
+  font-size: 24px;
+  z-index: 15;
+}
+
+#clock {
+  position: absolute;
+  bottom: 81px;
+  right: 143px;
+  font-size: 48px;
+  text-align: center;
+  ;text-align: right;
+  letter-spacing: -1px;
+  z-index: 12;
+  font-family: 'FSecureOffice', Arial;
+}
+
+#clock-time {
+  text-align: center;
+  font-size: 48px;
+}
+
+
+
+#clock-12-hour-period {
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+
+#histogram {
+  z-index: 11;
+  position: relative;
+  bottom: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 643px;
+}
+
+#histogram-bars {
+  height: 133px;
+  background: url(../images/graph.png);
+}
+#histogram-bars ul {
+  margin: 0;
+  height: 120px;
+  padding: 0;
+  padding-left: 32px;
+}
+#histogram-bars ul li {
+  padding: 0;
+  margin-right: 2px;
+  width: 4px;
+  background: url(../images/bar.png) repeat-y;
+  font-size: 0;
+  list-style: none;
+  vertical-align: bottom;
+  display: inline-block;
+}
+#histogram-bar-stretcher {
+  visibility: hidden;
+  height: 100%;
+}
+
+#histogram-text-minus-24 {
+  position: absolute;
+  left: 24px;
+}
+#histogram-text-minus-18 {
+  position: absolute;
+  left: 173px;
+}
+#histogram-text-minus-12 {
+  position: absolute;
+  left: 322px;
+}
+#histogram-text-minus-6 {
+  position: absolute;
+  left: 476px;
+}
+#histogram-text-minus-present {
+  position: absolute;
+  left: 590px;
+}

@@ -1,0 +1,29 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                        Application.index
+
+GET     /api/start/?                             Application.start();
+GET     /api/stream/?                            Application.stream();
+GET     /api/histogram/?                         Application.histogram();
+GET     /api/top10/?                             Application.top10();
+GET     /api/stream/{<[0-9]+>ts}                 Application.stream(ts);
+GET     /api/histogram/{<[0-9]+>ts}              Application.histogram(ts);
+GET     /api/top10/{<[0-9]+>ts}                  Application.top10(ts);
+GET     /api/footprint/?                         Application.footprint();
+GET     /api/zone/?                              Application.zone();
+GET     /api/forecast/?                          Application.forecast();
+GET     /admin-console/?                         Application.map();
+GET     /proxy/{domain}                          Application.clientProxy(domain);
+
+WS      /messaging                              Application.WebSocket.messaging(id);
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

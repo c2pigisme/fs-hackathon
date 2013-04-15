@@ -1,0 +1,23 @@
+<html>
+<body>
+  <div id="msgbox" class="alert-message" style="display:none"></div>
+      #{script src='jquery-1.8.3.min.js' /}
+      #{stylesheet src='main.css' /}
+  <script>
+	var demo = demo||{};
+	  demo.WS = window['MozWebSocket'] ? MozWebSocket : WebSocket
+	  demo.socket = new demo.WS('@@{Application.WebSocket.messaging(id)}');
+	  demo.socket.onopen = function(e) {
+	      console.log('socket open: ' + e); 
+	  };
+	  demo.socket.onclose = function(e) { 
+	      console.log('socket closed: ' + e); 
+	  };
+      demo.socket.onmessage = function(e) {
+        console.log(e);
+ 		$('#msgbox').html('%'.replace('%', e.data)).show().fadeOut(10000);
+	  }
+  </script>
+  <iframe src="http://${domain}" height="100%" width="100%"></iframe>
+</body>
+</html>

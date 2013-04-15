@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virusmap</title>
+        <meta charset='utf-8'>
+          #{stylesheet src="fonts.css" /}
+          #{stylesheet src="app.css" /}
+        </head>
+        <body>
+            <div id='app-container'>
+                <div id='world-container'>
+                    <div id='virusmap-container'>
+                        <div id='virusmap'>
+                            <img src=@{'/public/images/world.png'} width='3600' height='1800' alt='' />
+                        </div>
+                        <!-- /#virusmap -->
+                        <canvas id='markers' width='3600' height='1800'></canvas>
+                    </div>
+                    <!-- /#virusmap-container -->
+                </div>
+                <!-- /#world-container -->
+                <div id='logo'></div>
+                <div id='slogan'>Protecting the irreplaceable</div>
+                 
+                <div id='virus-streamlist'>
+                    <table id='virus-streamlist-table'>
+                        <thead>
+                            <tr>
+                                <th colspan='3'>24h</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan='3'>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan='3'>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan='3'>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan='3'>&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <!-- 
+                <div id='top10last24h'>
+                    <table id='top10last24h-table'>
+                        <thead>
+                            <tr>
+                                <th>Top 10 / 24h</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                 -->
+                <!-- 
+                <div id='histogram'>
+                    <div id='histogram-bars'>
+                        <ul></ul>
+                    </div>
+                    
+                    <div id='histogram-texts'>
+                        <span id='histogram-text-minus-24'>-24h</span>
+                        <span id='histogram-text-minus-18'>-18h</span>
+                        <span id='histogram-text-minus-12'>-12h</span>
+                        <span id='histogram-text-minus-6'>-6h</span>
+                        <span id='histogram-text-minus-present'>Present</span>
+                    </div>
+                   
+                </div>
+                 -->
+                <div id='clock'>
+                    <div id='clock-date'></div>
+                    <div id='clock-time'></div>
+                    <div id='clock-12-hour-period'></div>
+                </div>
+            </div>
+            <!-- /#app-container -->
+            #{script src='ext.js' /}
+            #{script src='app-all.js' /}
+        </body>
+</html>
